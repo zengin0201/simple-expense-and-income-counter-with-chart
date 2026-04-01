@@ -1,0 +1,156 @@
+
+:root {
+  --bg: #0a0a0b;
+  --card-bg: #16171a;
+  --card-border: #25262b;
+  --accent: #ff0000;
+  --text: #ffffff;
+  --text-dim: #888;
+  --expense: #ff4d4d;
+  --income: #2ecc71;
+  --shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+}
+
+
+.finance-app {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.input-section {
+  display: flex !important; 
+  gap: 15px !important;
+  margin-bottom: 30px !important;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  flex-wrap: wrap; /* Для мобилок */
+}
+
+
+.input-section input,
+.input-section select {
+  background: #1f2023;
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  padding: 12px 15px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.3s;
+  flex: 1; 
+  min-width: 150px;
+}
+
+.input-section input:focus,
+.input-section select:focus {
+  border-color: var(--accent);
+}
+
+
+.input-section button {
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.input-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+
+h2 {
+  font-size: 20px;
+  color: var(--text-dim);
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history > div {
+  background: rgba(255,255,255, 0.02);
+  border: 1px solid var(--card-border) !important;
+  border-radius: 12px !important;
+  width: auto !important; 
+  max-width: 100% !important;
+  transition: all 0.3s ease;
+}
+
+.history > div:hover {
+  background: rgba(255,255,255, 0.05);
+  transform: translateX(5px);
+  border-color: #333 !important;
+}
+
+.history span:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+
+.history span:last-child {
+  font-family: 'Courier New', monospace; 
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.history button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 6px;
+  opacity: 0; 
+  transition: all 0.2s ease;
+}
+
+.history > div:hover button {
+  opacity: 1; 
+}
+
+.history button:hover {
+  background: rgba(255, 77, 77, 0.1);
+  transform: scale(1.1);
+}
